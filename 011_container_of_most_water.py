@@ -11,7 +11,7 @@
 #  // time: O(n) 
 #  // space: O(1)
 class Solution:
-    def maxArea(self, height: List[int]) -> int:
+    def maxArea(self, height: list[int]) -> int:
         l, r, res = 0, len(height) - 1, 0 
 
         while l < r:
