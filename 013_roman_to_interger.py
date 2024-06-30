@@ -4,7 +4,7 @@
 # // if next char in obj's balue is bigger, res plue obj next char - obj's current char, and skip next char buy i++ 
 # // else just add obj's current char to res
 
-# // handle the last char in s
+# // **has to handle index out bounce with nextChar in python, 
 
 # // time: O(n)
 # // space: O(1)
@@ -22,13 +22,13 @@ class Solution:
         }
         res = 0
 
-        for index in range(len(s)-1):
+        for index in range(len(s)):
             char = s[index] 
-            next_char = s[index + 1]
+            next_char = s[index + 1] if index + 1 < len(s) else 'I'
 
             if dic[next_char] > dic[char]:
                 res -= dic[char] 
             else:
                 res += dic[char]
-        res += dic[s[-1]]
+ 
         return res
