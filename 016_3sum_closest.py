@@ -31,7 +31,5 @@ class Solution:
                     j += 1
                 else:
                     k -= 1
-
-        
-        
+                    
         return res 
