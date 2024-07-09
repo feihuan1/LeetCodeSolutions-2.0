@@ -5,7 +5,14 @@
 // return dummy.next
 
 // time: O(n)
-// space: O(n)
+// space: O(1)
+
+class ListNode {
+    constructor(val, next) {
+        this.val = (val===undefined ? 0 : val)
+        this.next = (next===undefined ? null : next)
+    }
+}
 
 var mergeTwoLists = function(list1, list2) {
     let dummy = new ListNode() 
